@@ -1,0 +1,49 @@
+<app-superadminheader></app-superadminheader>
+<section id="admin-home">
+    <div class="mainContent">
+        <div class="adminPanelContent">
+        <app-superadminpanel></app-superadminpanel></div>
+        <div class="adminContent">
+            <section id="adminViewUsers">
+                <form action="">
+                    <h4 style="color: #444;;">LIST OF POSTS</h4>
+                    <div class="tableUser table table-hover table-striped">
+                        <table>
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Blogger name</th>
+                                    <th>PostID</th>
+                                    <th>Title</th>
+                                    
+                                    
+                                    <th>Category</th>
+                                    <th>Created At</th>
+                                   
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let post of posts">
+                                 
+                                     <td >{{post.username}}</td>
+                                     <td >{{post.postid}}</td> 
+                                     <td >{{post.title}}</td> 
+                                     
+                                     <td >{{post.category}}</td>
+                                     
+                                     <td>{{post.updatedAt.slice(0,22)}}</td>
+                                     <td >
+                                        <button (click)='deletePost(post)' class="icon"><i class="fa-solid fa-trash" ></i></button></td>
+                                </tr>  
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+             </section>
+            
+        </div>
+    </div>
+</section>
+
+
+

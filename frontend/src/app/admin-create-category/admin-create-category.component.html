@@ -1,0 +1,23 @@
+<app-admin-header></app-admin-header>
+<section id="admin-home">
+    <div class="mainContent">
+        <div class="adminPanelContent">
+        <app-adminpanel></app-adminpanel></div>
+        <div class="adminContent">
+            <section id="adminCreateCategory">
+                <div  class="adminCreateCategoryTitle" >
+                <h4 style="color: white;">CREATE NEW CATEGORY</h4></div>
+
+                <form action="" class="writeForm" #createForm="ngForm" (ngSubmit)="adminCat(createForm.value)" enctype="multipart/form-data">
+                    <label >Enter Category name</label>
+                    <div class="writeFormGroup">
+                        <!-- <input type="text" placeholder="Enter Category name.." class="writeInput" autofocus="true" name="category"  [(ngModel)]="category.categoryname"  #category="ngModel" required> -->
+                   <input type="text" name="categoryname" id="" [(ngModel)]="category.categoryname" #categoryname="ngModel">
+                    </div>
+                    <button class="writeSubmit"  [disabled]="!createForm.valid">Submit</button>
+                </form>
+            </section>
+        </div>
+    </div>
+</section>
+

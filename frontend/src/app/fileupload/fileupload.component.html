@@ -1,0 +1,55 @@
+<app-header></app-header>
+<section class="write">
+    <img src="https://th.bing.com/th/id/OIP.XW8wC90s9DRgXvilacFglQHaEE?pid=ImgDet&rs=1" alt="" class="writeImg">
+    <form action="" class="writeForm" #createForm="ngForm" (ngSubmit)="userPost(createForm.value)" enctype="multipart/form-data">
+        <div class="writeFormGroup">
+
+            <input #fileInput type="file"  id="" (change)="onFileUpload()" name="photo"  [(ngModel)]="post.photo" #desc="ngModel" required>
+           
+            <input type="text" placeholder="Title" class="writeInput" autofocus="true" name="title"  [(ngModel)]="post.title" #title="ngModel" required>
+        </div>
+        <div class="writeFormGroup">
+            
+            <label class="writeCategory">Select your Category</label>
+    <select id="writedropdown" name="category"  [(ngModel)]="post.category" #category="ngModel" required>
+        <option>Life</option>
+        <option>Music</option>
+        <option>Style</option>
+        <option>Sport</option>
+        <option>Tech</option>
+        <option>Cinema</option>
+    </select>
+
+        </div>
+        <input type="text" style="margin-left: 130px;font-size: 20px;" placeholder="Enter your username.." class="writeInput" autofocus="true" name="username"  [(ngModel)]="post.username" #title="ngModel" required>
+    
+        <div class="writeFormGroup">
+            <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Tell your story.." class="writeInput writeText" name="desc"  [(ngModel)]="post.desc" #desc="ngModel" required></textarea> 
+        </div>
+        <button class="writeSubmit"  [disabled]="!createForm.valid">Publish</button>
+    </form>
+</section> 
+
+
+
+
+<!-- <form action="" class="writeForm" #createForm="ngForm" (ngSubmit)="userPost(createForm.value)" enctype="multipart/form-data">
+    <input type="text" placeholder="username" class="writeInput" autofocus="true" name="username"  [(ngModel)]="post.username" #title="ngModel" required>
+ <input type="text" placeholder="Title" class="writeInput" autofocus="true" name="title"  [(ngModel)]="post.title" #title="ngModel" required>
+    <label class="writeCategory">Select your Category</label>
+    <select id="writedropdown" name="category"  [(ngModel)]="post.category" #category="ngModel" required>
+        <option>Life</option>
+        <option>Music</option>
+        <option>Style</option>
+        <option>Sport</option>
+        <option>Tech</option>
+        <option>Cinema</option>
+    </select>
+    <textarea name="" id="" cols="30" rows="10" type="text" placeholder="Tell your story.." class="writeInput writeText" name="desc"  [(ngModel)]="post.desc" #desc="ngModel" required></textarea> -->
+<!-- <div id="fileupload">
+    <input #fileInput type="file"  id="" (change)="onFileUpload()" name="photo"  [(ngModel)]="post.photo" #desc="ngModel" required>
+
+</div>
+<button>Submit</button>
+</form> --> -->
+

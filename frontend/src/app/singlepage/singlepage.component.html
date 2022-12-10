@@ -1,0 +1,32 @@
+<app-header></app-header>
+<section id="singlePage">
+<div class="singlePageContainer">
+        
+    <div class="post">    
+        <img src={{post.photo}} alt="postImage" class="postImg">
+       
+           
+        <div class="postInfo">
+            <div class="postCats">
+                
+                <span class="postCat">{{post.category}}</span>
+                
+            </div>
+            <span class="postTitle" onclick="viewPost(post)">
+               {{post.title}}
+            </span>
+            <hr>
+           
+            <span class="postDate">Updated on: {{post.updatedAt}}</span> 
+            
+        </div>
+        <p class="postDesc">{{post.desc}}</p>  
+        <button class="actionItemEdit" routerLink="/user-edit-page" >Edit</button>
+        <button class="actionItemDelete" (click)="deletePost(post);">Delete</button>
+        </div>
+
+<div class="sideSection">
+    <app-sidebar></app-sidebar>
+</div>
+</div>
+</section>

@@ -1,0 +1,31 @@
+
+<app-header></app-header>
+<section id="singlePage">
+<div class="singlePageContainer">
+    <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="editPost()" >   
+    <div class="post">    
+        <img src="https://th.bing.com/th/id/OIP.6ykHm-AQc724x_8daEGVEQHaE7?pid=ImgDet&rs=1" alt="postImage" class="postImg">
+        <div class="postInfo">
+            <div class="postContent">
+                <label for="">Category Name</label>
+                <input type="text" style="margin-left: 20px;" name="category" [(ngModel)]="post.category" required  >
+              
+            </div>
+            <div class="postContent">
+            <label for="">Title</label>
+            <input type="text" style="margin-left: 100px;" name="title" [(ngModel)]="post.title" required  >
+        </div>
+            <hr>
+           
+        <label for="textarea">Post Description</label><br>
+        <textarea name="textarea" id="" cols="100" rows="15" style="overflow-y: scroll;" type="text" name="desc" [(ngModel)]="post.desc" required ></textarea>
+        
+        </div>
+        <button class="actionItemEdit">Update</button>
+    </div>
+</form>
+<div class="sideSection">
+    <app-sidebar></app-sidebar>
+</div>
+</div>
+</section>

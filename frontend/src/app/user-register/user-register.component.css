@@ -1,0 +1,65 @@
+#userRegister{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+.uRegister{
+    flex:5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:-15%;
+}
+#uregisterbanner{
+    flex:5;
+    height: 700px;
+    width:700px;
+    background-image: url("../user-register/pic/signupimg.jpg");
+    background-repeat:no-repeat;
+    margin-right: 10%;
+    margin-top: 100px;
+}
+.registerTitle{
+    font-size: 50px;
+}
+.registerForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.registerForm > label{
+    margin: 10px 0;
+
+}
+.registerInput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid gray;
+
+}
+
+.registerButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color:rgb(197, 74, 181);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.registerLoginButton{
+    position: absolute;
+    top:60px;
+    right: 20px;
+    background-color:lightcoral;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}

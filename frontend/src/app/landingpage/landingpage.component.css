@@ -1,0 +1,258 @@
+/*HEADER*/
+#header{
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    font-family: 'Josefin Sans',sans-serif;
+    z-index: 999;
+}
+.topLeft,.topRight{
+    flex: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topCenter{
+   
+    flex:6;
+}
+
+.topIcon{
+    font-size: 20px;
+    margin-right: 10px;
+    color:#444;
+    cursor:pointer;
+}
+.topImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+.topList{
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.topListItem{
+    margin-right: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    cursor: pointer;
+}
+.topSearchIcon{
+    font-size: 18px;
+    color: #666;
+    cursor: pointer;
+    margin-left: 15px;
+}
+hr.hr{
+    
+    width: 95%;
+    border: 1px solid black;
+  border-radius: 5px;
+    margin-left: 2%;
+}
+/*BODY*/
+#mainContent{
+    margin-top: 60px;
+    background-color: beige;
+    
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora',serif;
+    color: rgb(14, 13, 13);
+}
+.titleSmall{
+    position: absolute;
+    top: 12%;
+    font-size: 20px;
+}
+.titleLarge{
+    position: absolute;
+    top: 18%;
+    font-size: 100px;
+}
+#backgroundImage{
+    width: 100%;
+    height: 525px;
+   
+    object-fit: cover;
+}
+
+#posts{
+  
+   display: flex;
+   flex-wrap: wrap; 
+   margin: 20px;
+   height: 400px;
+   overflow: hidden;
+}
+
+.post{
+    width: 510px;
+    margin: 0px 45px 40px 40px;
+  
+}
+#imgicon{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+#trending{
+
+padding-bottom: 10px;
+}
+
+.trendingTitle{
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin-left: 80px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    
+}
+.sidebar{
+    width: 300px;
+}
+.sidebarTitle{
+    font-family: "Josefin Sans",sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+   margin-left:50px ;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+    
+    width: 500px;
+}
+.sidebarCategories{
+    /* width: 500px;
+    height: 700px;
+    overflow-y: hidden;
+   
+    margin-top: 20px;
+    display: inline-block; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+   
+}
+.sidebarList{
+    list-style: none;
+    margin-bottom: 30px;
+    /* display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center; */
+    margin-right: 140px;
+}
+.sidebarListItem{
+    display: inline-block;
+    margin-top: 15px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid rgb(85, 82, 82);
+    color: rgb(85, 82, 82);
+}
+#cat{
+    border: 1px solid rgb(85, 82, 82);
+    padding: 10px;
+    margin-top: 30px;
+    margin-right: 100px;
+    color:rgb(85, 82, 82);
+    font-size: 16px;
+    
+}
+#postUsername{
+text-transform: uppercase;
+font-weight: 500;
+font-size: 20px;
+}
+#postCategory{
+text-transform: uppercase;
+font-weight: 500;
+font-size: 20px;
+}
+#postTitle{
+  font-size: 24px;
+  font-weight: 600;
+}
+#postTime{
+font-size: 18px;
+font-weight: 200;
+}
+.postfooter{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+#main{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+    margin-bottom: 500px;
+}
+#mainposts{
+    flex: 9;
+    margin-right: 20px;
+  
+}
+#sidebar{
+    flex:3;
+}
+#mainposts{
+   
+    max-height: 200px;
+    width: 900px;
+    
+}
+.mainpost{
+display: flex;
+flex-direction: row;
+margin: 30px ;
+padding: 10px;
+margin-bottom: 10px;
+}
+#postDesc{
+    height: 100px;
+    width: 500px;
+    overflow-y: hidden;
+}
+#postLeft{
+    display: flex;
+    flex-direction: column; 
+}
+.postImg{
+    width: 400px;
+    height: 240px;
+    border-radius: 7px;
+    float: right;
+}
+#footer{
+    background-color: black;
+    color:blanchedalmond;
+   
+   width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    position:fixed-bottom;
+    bottom:0;
+  
+
+}

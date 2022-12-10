@@ -1,0 +1,36 @@
+<app-mainheader></app-mainheader>
+<section id="userRegister">
+  
+    <div class="uRegister">
+    <span class="registerTitle">Register</span>
+    <form action="" class="registerForm"  #userlogin="ngForm" (ngSubmit)="userSignup(userlogin.value)" enctype="multipart/form-data">
+       
+        <label for="">Username</label>
+        <input type="text" placeholder="Enter your username..." class="registerInput" name="username"  [(ngModel)]="user.username" #uname="ngModel" required >
+        <div class="msg">
+            <small style="color:red" *ngIf="uname.invalid && uname.touched">Username is required </small>
+          </div>
+        <label for="">Email</label>
+        <input type="text" placeholder="Enter your email..." class="registerInput" name="email"  [(ngModel)]="user.email" #email="ngModel" required>
+        <div class="msg">
+            <small style="color:red" *ngIf="email.invalid && email.touched">Email is required </small>
+          </div>
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter your password..." class="registerInput" name="password"  [(ngModel)]="user.password" #pass="ngModel" required>
+        <div class="msg">
+            <small style="color:red" *ngIf="pass.invalid && pass.touched">Password is required </small>
+          </div>
+          <label for="">ProfilePic</label>
+          <input type="file"  #fileInput  id="" (change)="onFileUpload()" class="fileInput" name="profilePic"  [(ngModel)]="user.profilePic" #profilepic="ngModel" required>
+          <div class="msg">
+              <small style="color:red" *ngIf="profilepic.invalid && profilepic.touched">ProfilePic is required </small>
+            </div>
+        <button class="registerButton">Register</button>
+    </form>
+    <!-- <button class="registerLoginButton" routerLink="/user-login" [disabled]="!userlogin.valid">Login</button> -->
+    </div>
+    <div id="uregisterbanner">
+       
+    </div>
+</section>
+

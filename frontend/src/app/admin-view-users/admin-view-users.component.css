@@ -1,0 +1,32 @@
+.mainContent{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+.adminPanelContent{
+    flex: 3;
+}
+.adminContent{
+    flex: 9;
+    display: flex;
+  
+    justify-content: center;
+}
+.tableUser{
+    min-height: 500px;
+    max-width: 1000px;
+    
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-color: lightcoral ;
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}

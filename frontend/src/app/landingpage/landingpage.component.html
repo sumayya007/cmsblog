@@ -1,0 +1,90 @@
+<app-mainheader></app-mainheader>
+
+<section id="mainContent">
+    <div class="titles">
+        <span class="titleLarge">Channel</span>
+        <span class="titleSmall">Publish your passions,your way</span>
+    </div>
+    <img id="backgroundImage" src="https://wallup.net/wp-content/uploads/2019/09/10430-green-nature-leaves-plants-sunlight.jpg">
+</section>
+<section id="trending">
+    <div class="trendingTitle">
+        <span style="padding: 10px;"><i class="fa-solid fa-paper-plane" style="margin-right:20px;"></i>TRENDING ON CHANNEL</span>
+        
+    </div>
+
+
+<section id="posts"  >
+    <div class="postcontainer" *ngFor="let post of posts">
+
+   
+<div class="post">  
+    <ul style="list-style:none ;">
+        <li> 
+            <div><img id="imgicon" src={{post.photo}} alt="">
+            <span id="postUsername">{{post.username}}</span> in <span id="postCategory">{{post.category}}</span>
+            </div>
+            <br>
+            <span id="postTitle">{{post.title}}</span>
+            <br>
+            <span id="postTime">Updated on: {{post.updatedAt}}</span>
+        </li>
+    </ul>  
+
+</div>
+</div>
+</section>
+</section>
+<hr class="hr">
+
+<section id="maincontent">
+    <div id="main">
+        
+        <div id="mainposts" >
+            <h2 style="margin-left: 30px;margin-bottom: 30px;">VIEW ALL POSTS..</h2>
+            <div class="postcontainer"*ngFor="let post of posts">
+                
+           
+        <div class="mainpost">    
+        <div id="postLeft">
+            <div>
+            <span id="postUsername">{{post.username}}</span> in <span id="postCategory">{{post.category}}</span>
+            </div>
+            <br>
+            <span id="postTitle">{{post.title}}</span>
+            <br>
+            <span id="postDesc">{{post.desc}}</span>
+            <div  class="postfooter">
+                <span id="postTime"><span style="font-style:italic;"> Updated on:</span> {{post.updatedAt}}</span>
+                <i class="fa-regular fa-bookmark" style="cursor: pointer;"></i>
+            </div>
+            
+        </div>
+        <div id="postright">
+            <img src={{post.photo}} alt="postImage" class="postImg">
+        </div>
+    </div>
+   </div>
+    </div>
+    <div id="sidebar">
+        <div class="sidebarTitle">
+            <span style="padding: 10px;">DISCOVER MORE OF WHAT MATTERS <br>TO YOU</span>
+            <div class="sidebarCategories">
+                <div class="sidebarList" *ngFor="let category of categories">
+                    <span class="sidebarListItem">{{category.categoryname}}</span>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+</section>
+<section id="footer">
+    <p style="margin-top: 8px;">CopyRight Channel@2022</p>
+</section>
+
+
+   
+    
+

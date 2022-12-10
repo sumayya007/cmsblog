@@ -1,0 +1,48 @@
+.mainContent{
+    display: flex;
+}
+.adminPanel{
+    flex:3;
+    flex-direction: row;
+}
+.adminContent{
+    flex: 9;
+    display: flex;
+  
+    justify-content: center;
+    margin-top: 100px;
+  }
+.tableUser{
+    min-height: 500px;
+    max-width: 1000px;
+    margin-top: 20px;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-color: lightcoral ;
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.writeFormGroup{
+    padding-bottom: 10px;
+}
+.writeSubmit{
+   
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+#adminEditCat{
+    display: flex;
+    flex-direction: column;
+}

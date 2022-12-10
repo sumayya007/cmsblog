@@ -1,0 +1,37 @@
+<app-admin-header></app-admin-header>
+<section id="settings">
+    <div class="settingsWrapper">
+         <div class="settingsTitle">
+            <span class="settingsUpdateTitle">Update Your Account</span>
+            <span class="settingsDeleteTitle">Delete Account</span>
+         </div>
+         <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="editadminprofile()" >
+            <label for="">Profile Picture</label>
+            <div class="settingsProfilePic">
+                <img src="https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg" alt="">
+                <label for="fileInput">
+                 <span class="settingsPPIcon"><i class="fas fa-user-circle"></i></span>
+                </label>
+                <input type="file" name="" id="fileInput" style="display:none;">
+                </div>
+
+                <label>Username</label>
+             
+                <input type="text" name="username" [(ngModel)]="admin.adminname" required  >
+                <label>Email</label>
+                <input type="email" name="email" [(ngModel)]="admin.email" required >
+                
+                <label>Password</label>
+                
+                <input type="password" name="password" [(ngModel)]="admin.password" required >
+                <button class="settingsSubmit">Update</button>
+         </form>
+    </div>
+    <div class="side">
+        <app-sidebar></app-sidebar>
+    </div>
+    
+</section>
+
+
+

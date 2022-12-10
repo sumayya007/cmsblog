@@ -1,0 +1,24 @@
+<section id="header">
+    <div class="topLeft">
+        <!-- <i class="topIcon fa-brands fa-square-facebook"></i>
+        <i class="topIcon fa-brands fa-square-twitter"></i>
+        <i class="topIcon fa-brands fa-square-pinterest"></i>
+        <i class="topIcon fa-brands fa-square-instagram"></i> -->
+        <span class="logo">CHANNEL</span>
+    </div>
+    <div class="topCenter">
+        <ul class="topList">
+            <li class="topListItem" routerLink="/user-home">HOME</li>
+            <li class="topListItem">ABOUT</li>
+            <li class="topListItem">CONTACT</li>
+            <li class="topListItem" routerLink="/fileupload">WRITE</li>
+            <li class="topListItem" (click)="logout()">LOGOUT</li>
+        </ul>
+
+    </div>
+    <div class="topRight">
+        <img class="topImg" routerLink="/user-settings" src={{this.user.profilePic}} alt="">
+        <i class="topSearchIcon fa-solid fa-magnifying-glass"></i>
+        <!-- https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg -->
+    </div>
+</section>

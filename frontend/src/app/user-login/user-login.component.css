@@ -1,0 +1,69 @@
+#userlogin{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: -150px;
+  
+   
+
+}
+.ulogin{
+    flex:2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20%;
+    margin-top: 50px;
+    
+   
+}
+#uloginbanner{
+    flex:8;
+    height: 700px;
+    width: 500px;
+    background-image: url("../user-login/img/loginpic.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.loginTitle{
+    font-size: 50px;
+}
+.loginForm{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+.loginForm > label{
+    margin: 10px 0;
+
+}
+.loginInput{
+    padding: 10px;
+    background-color: white;
+    border: none;
+    border-bottom: 2px solid gray;
+}
+.loginButton{
+    margin-top: 20px;
+    cursor: pointer;
+    background-color:rgb(197, 74, 181);
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}
+.loginRegisterButton{
+    position: absolute;
+    top:60px;
+    right: 20px;
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+}

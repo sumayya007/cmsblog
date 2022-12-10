@@ -1,0 +1,36 @@
+<app-superadminheader></app-superadminheader>
+<section id="addAdmin">
+  
+    <div class="aRegister">
+    <span class="registerTitle">Add Admin</span>
+    <form action="" class="registerForm"  #addadmin="ngForm" (ngSubmit)="addAdmin(addadmin.value)" enctype="multipart/form-data">
+       
+       
+        <label for="">Admin Name</label>
+        <input type="text" placeholder="Enter new admin name..." class="registerInput" name="adminname"  [(ngModel)]="admin.adminname" #aname="ngModel" required >
+        <div class="msg">
+            <small style="color:red" *ngIf="aname.invalid && aname.touched">Admin name is required </small>
+        </div>
+        <label for="">Email</label>
+        <input type="text" placeholder="Enter your email..." class="registerInput" name="email"  [(ngModel)]="admin.email" #adminemail="ngModel" required>
+        <div class="msg">
+            <small style="color:red" *ngIf="adminemail.invalid && adminemail.touched">Email is required </small>
+          </div>
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter your password..." class="registerInput" name="password"  [(ngModel)]="admin.password" #adminpass="ngModel" required>
+        <div class="msg">
+            <small style="color:red" *ngIf="adminpass.invalid && adminpass.touched">Password is required </small>
+          </div>
+          <label for="">ProfilePic</label>
+          <input type="file"  #fileInput  id="" (change)="onUpload()" class="fileInput" name="profilePic"  [(ngModel)]="admin.profilePic" #pic="ngModel" required>
+          <div class="msg">
+              <small style="color:red" *ngIf="pic.invalid && pic.touched">ProfilePic is required </small>
+            </div>
+        <button class="registerButton">Add</button>
+    </form>
+    <!-- <button class="registerLoginButton" routerLink="/user-login" [disabled]="!userlogin.valid">Login</button> -->
+    </div>
+  
+</section>
+
+

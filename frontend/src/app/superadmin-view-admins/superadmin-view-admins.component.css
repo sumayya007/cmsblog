@@ -1,0 +1,25 @@
+.mainContent{
+    display: flex;
+    margin-top: 40px;
+    flex-direction: row;
+}
+.adminPanelContent{
+    flex: 3;
+}
+.adminContent{
+    flex: 9;
+    padding: 30px;
+}
+.icon{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border-color: lightcoral ;
+    background-color: lightcoral;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    cursor: pointer;
+}

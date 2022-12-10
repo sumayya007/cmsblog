@@ -1,0 +1,41 @@
+<app-header></app-header>
+<section id="mainContent">
+    <div class="titles">
+        <span class="titleLarge">Channel</span>
+        <span class="titleSmall">Publish your passions,your way</span>
+    </div>
+    <img id="backgroundImage" src="https://wallup.net/wp-content/uploads/2019/09/10430-green-nature-leaves-plants-sunlight.jpg">
+</section>
+<div id="wrapper">
+    <section id="posts" >
+        <div class="postcontainer"*ngFor="let post of posts">
+
+       
+    <div class="post">
+        <!-- <img src="https://localhost:5000/backend/public/images/1669385193850.png" alt=""> -->
+       
+        <!-- <img src="https://th.bing.com/th/id/R.635908e1f61bcee1a9918cc3b3685755?rik=uIdzeokvS66chg&riu=http%3a%2f%2fcdn.wallpapersafari.com%2f59%2f21%2fOvclJq.jpg&ehk=1XdpSqodqh9hTm2hn8oK%2bVbZsYMlV%2f0Je79x07De1PQ%3d&risl=&pid=ImgRaw&r=0" alt="postImage" class="postImg">    -->
+    <!-- <img style="height: 80px;width: 100px;"  [src]="imageBaseUrl+post.photo" alt="postImage" class="postImg"/> -->
+  <img src={{post.photo}} alt="postimage" class="postImg">
+    <div class="postInfo">
+        <div class="postCats">
+            <span class="postCat">{{post.category}}</span>
+          
+        </div>
+        <span class="postTitle">
+           {{post.title}}
+        </span>
+        <hr>
+
+        <span class="postDate">Updated on: {{post.updatedAt}}</span>  
+    </div>
+    <p class="postDesc">{{post.desc}}</p>  
+     <button class="postButton" (click)="viewPost(post)">View Post</button>
+    </div>
+</div>
+    </section>
+    <div class="sideSection">
+        <app-sidebar></app-sidebar>
+    </div>
+    
+</div>

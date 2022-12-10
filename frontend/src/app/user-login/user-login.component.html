@@ -1,0 +1,26 @@
+<app-mainheader></app-mainheader>
+<section id="userlogin">
+    <div id="uloginbanner">
+       
+    </div>
+    <div class="ulogin">
+    <span class="loginTitle">Login</span>
+    <form action="" class="loginForm" #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
+        <label for="">Email</label>
+        <input type="email" placeholder="Enter your email..." class="loginInput" name="email" [(ngModel)]="user.email" required #email="ngModel">
+        <div class="msg">
+            <small style="color:red" *ngIf="email.invalid && email.touched">Email is required </small>
+        </div>
+        <label for="">Password</label>
+        <input type="password" placeholder="Enter your password..." class="loginInput" name="password" [(ngModel)]="user.password" minlength="5" required #password="ngModel">
+        <div class="msg">
+            <!-- <small style="color:red" *ngIf="password.invalid && password.touched">Password is required </small> -->
+          </div>
+        <button class="loginButton" >Login</button>
+        <!-- <button class="loginRegisterButton" routerLink="/user-register">Register</button> -->
+    </form>
+    
+    </div>
+   
+</section>
+

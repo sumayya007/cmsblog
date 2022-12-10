@@ -1,0 +1,11 @@
+.mainContent{
+    display: flex;
+    margin-top: 40px;
+}
+.adminPanelContent{
+    flex: 3;
+}
+.adminContent{
+    flex: 9;
+    padding: 30px;
+}

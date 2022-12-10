@@ -1,0 +1,37 @@
+<app-header></app-header>
+<section id="settings">
+    <div class="settingsWrapper">
+        <form action="" class="settingsForm"  >
+         <div class="settingsTitle">
+            <span class="settingsUpdateTitle">Update Your Account</span>
+            <span class="settingsDeleteTitle" (click)="deleteUser(user);">Delete Account</span>
+         </div>
+        
+            <label for="">Profile Picture</label>
+            <div class="settingsProfilePic">
+                <img src={{this.user.profilePic}} alt="">
+                <!-- <label for="fileInput">
+                    https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg
+                 <span class="settingsPPIcon"><i class="fas fa-user-circle"></i></span>
+                </label>
+                <input type="file" name="" id="fileInput" style="display:none;"> -->
+                </div>
+
+                <label>Username</label>
+                <td >{{this.user.username}}</td>
+               
+                <label>Email</label>
+               
+                <td>{{this.user.email}}</td>
+                <label>Password</label>
+                <td>{{this.user.password}}</td>
+               
+                <button class="settingsSubmit" routerLink="/user-edit-settings">Edit</button>
+         </form>
+    </div>
+    <div class="side">
+        <app-sidebar></app-sidebar>
+    </div>
+    
+</section>
+

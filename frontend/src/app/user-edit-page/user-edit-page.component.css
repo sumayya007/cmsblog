@@ -1,0 +1,52 @@
+#singlepage{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.singlePageContainer{
+    flex:9;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: row;
+    margin: 20px;
+}
+.sideSection{
+    flex:3;
+}
+.post{
+    width:900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 20px;
+}
+.action{
+    float: right;
+}
+.actionItem{
+    padding: 5px;
+    margin-left: 10px;
+}
+.postImg{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 7px;
+
+}
+.actionItemEdit{
+    background-color: teal;
+    cursor: pointer;
+    border: none;
+    width: 95%;
+    color: white;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 20px;
+  
+}
+.postContent{
+    margin-bottom: 10px;
+    margin-top: 10px;
+ 
+}

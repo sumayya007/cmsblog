@@ -1,0 +1,56 @@
+<app-admin-header></app-admin-header>
+<section id="admin-home">
+    <div class="mainContent">
+        <div class="adminPanelContent">
+        <app-adminpanel></app-adminpanel></div>
+        <div class="adminContent">
+            <section id="adminEditCat">
+                <form action="" #editempForm="ngForm"  (ngSubmit)="editCategory()">
+                   
+                    <div class="tableCat">
+                      
+                               
+                                  <h4 style="color: #444;"> CATEGORY NAME</h4>  
+                            
+                                
+                                    <label for="">Enter new Category Name</label>
+                                    <br>
+                                    <div class="writeFormGroup">
+                                    <input type="text" name="categoryname"  [(ngModel)]="category.categoryname" #categoryname="ngModel" required >
+                                    </div>
+
+                                        <button class="writeSubmit">Submit</button>
+                                    
+                      
+                    </div>
+                </form>
+             </section>
+            
+            
+        </div>
+    </div>
+</section>
+<section id="adminEditCat">
+    <form action="" #editempForm="ngForm"  (ngSubmit)="editCategory()">
+       
+        <div class="tableCat">
+            <table>
+                <thead>
+                    <tr>
+                        <th>CategoryName</th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr >
+                        <td><label for="">Enter new Category Name</label></td>
+                         <td ><input type="text" name="categoryname"  [(ngModel)]="category.categoryname" #categoryname="ngModel" required ></td> 
+                         <td >
+                            <button >Submit</button>
+                        
+                </tbody>
+            </table>
+        </div>
+    </form>
+ </section>
+
