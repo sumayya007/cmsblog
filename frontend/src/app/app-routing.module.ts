@@ -10,6 +10,7 @@ import { AdminViewCategoriesComponent } from './admin-view-categories/admin-view
 import { AdminViewPostsComponent } from './admin-view-posts/admin-view-posts.component';
 import { AdminViewUsersComponent } from './admin-view-users/admin-view-users.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
+import { AuthguardGuard } from './authguard.guard';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
@@ -38,6 +39,7 @@ import { UserSettingsComponent } from './user-settings/user-settings.component';
 
 
 
+
 const routes: Routes = [
   {
     path:'landingpage',
@@ -57,27 +59,33 @@ const routes: Routes = [
   },
   {
     path:'user-create-post',
-    component:UserCreatePostComponent
+    component:UserCreatePostComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'user-edit-settings',
-    component:UserEditSettingsComponent
+    component:UserEditSettingsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'user-edit-page',
-    component:UserEditPageComponent
+    component:UserEditPageComponent,
+    canActivate:[AuthguardGuard]
   },
    {
     path:'user-settings',
-    component:UserSettingsComponent
+    component:UserSettingsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'admin-settings',
-    component:AdminSettingsComponent
+    component:AdminSettingsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'admin-edit-settings',
-    component:AdminEditSettingsComponent
+    component:AdminEditSettingsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'sidebar',
@@ -93,23 +101,28 @@ const routes: Routes = [
   },
   {
     path:'admin-view-users',
-    component:AdminViewUsersComponent
+    component:AdminViewUsersComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'admin-create-category',
-    component:AdminCreateCategoryComponent
+    component:AdminCreateCategoryComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'admin-edit-category',
-    component:AdminEditCategoryComponent
+    component:AdminEditCategoryComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'admin-view-categories',
-    component:AdminViewCategoriesComponent
+    component:AdminViewCategoriesComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'admin-view-posts',
-    component:AdminViewPostsComponent
+    component:AdminViewPostsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'adminpanel',
@@ -129,23 +142,28 @@ const routes: Routes = [
   },
   {
     path:'superadmin-view-admins',
-    component:SuperadminViewAdminsComponent
+    component:SuperadminViewAdminsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'superadmin-view-categories',
-    component:SuperadminViewCategoriesComponent
+    component:SuperadminViewCategoriesComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'superadmin-view-posts',
-    component:SuperadminViewPostsComponent
+    component:SuperadminViewPostsComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'superadmin-view-users',
-    component:SuperadminViewUsersComponent
+    component:SuperadminViewUsersComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'superadmin-add-admin',
-    component:SuperadminAddAdminComponent
+    component:SuperadminAddAdminComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'header',
@@ -161,7 +179,8 @@ const routes: Routes = [
   },
   {
     path:'singlepage',
-    component:SinglepageComponent
+    component:SinglepageComponent,
+    canActivate:[AuthguardGuard]
   },
   {
     path:'footer',
@@ -169,7 +188,8 @@ const routes: Routes = [
   },
   {
     path:'fileupload',
-    component:FileuploadComponent
+    component:FileuploadComponent,
+    canActivate:[AuthguardGuard]
   }
 ];
 

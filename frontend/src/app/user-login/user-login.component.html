@@ -5,6 +5,9 @@
     </div>
     <div class="ulogin">
     <span class="loginTitle">Login</span>
+    <div *ngIf="showErrorMessage">
+        <h1 style="color: white;background-color:rgb(212, 117, 136);font-size: 14px;padding:10px 25px 10px 25px">Invalid User Credentials</h1>
+      </div>
     <form action="" class="loginForm" #loginForm="ngForm" (ngSubmit)="userLogin(loginForm.value)">
         <label for="">Email</label>
         <input type="email" placeholder="Enter your email..." class="loginInput" name="email" [(ngModel)]="user.email" required #email="ngModel">

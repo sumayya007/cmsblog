@@ -33,7 +33,7 @@ export class AuthServiceService {
  
   }
   // !! to check whether token is present or not,returns a boolean value
-  loggedIn(){
+  IsloggedIn(){
     return !!localStorage.getItem('token')  
   }
   // for reading the value of token in local storage

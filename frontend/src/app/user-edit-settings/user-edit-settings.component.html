@@ -3,18 +3,18 @@
     <div class="settingsWrapper">
          <div class="settingsTitle">
             <span class="settingsUpdateTitle">Update Your Account</span>
-            <span class="settingsDeleteTitle">Delete Account</span>
+            <span class="settingsDeleteTitle" (click)='deleteuserprofile(user)'>Delete Account</span>
          </div>
          <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="edituserprofile()" >
-            <label for="">Profile Picture</label>
+            <!-- <label for="">Profile Picture</label>
             <div class="settingsProfilePic">
-                <img src="https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg" alt="">
+                <!-- <img alt="" name="profilePic" [(ngModel)]="user.profilePic" required> -->
                 <!-- <label for="fileInput">
                  <span class="settingsPPIcon"><i class="fas fa-user-circle"></i></span>
                 </label>
                
                 <input #fileInput type="file" style="display:none;" id="fileInput" (change)="onFileUpload()" name="profilePic"  [(ngModel)]="user.profilePic" #profilePic="ngModel" required> -->
-                </div>
+                <!-- </div> --> 
 
                 <label>Username</label>
              

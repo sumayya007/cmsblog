@@ -6,7 +6,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: sticky-bottom;
+   
+    position:fixed;
+    bottom:0;
   
 
 }

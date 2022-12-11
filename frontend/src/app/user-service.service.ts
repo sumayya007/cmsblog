@@ -136,6 +136,7 @@ console.log(category)
    
     return this.http.delete("http://localhost:3000/user/removeuser/"+id);
   }
+  
   deleteAdmin(id:any){
    
     return this.http.delete("http://localhost:3000/admin/removeadmin/"+id);

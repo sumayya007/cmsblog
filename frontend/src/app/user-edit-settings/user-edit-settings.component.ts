@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-
+import {ElementRef,ViewChild} from '@angular/core';
 import { UserServiceService } from '../user-service.service';
 import { HttpClient } from '@angular/common/http';
 
@@ -10,7 +10,8 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./user-edit-settings.component.css']
 })
 export class UserEditSettingsComponent implements OnInit {
-
+  @ViewChild('fileInput', { static: false })
+  fileInput!: ElementRef;
 user={
   userid:'',
   username:'',
@@ -36,12 +37,28 @@ user={
    
    })
   }
- 
+  onFileUpload(){
+    const imageBlob=this.fileInput.nativeElement.files[0];
+    const file=new FormData();
+    file.set('file',imageBlob);
+    
+    this.http.post('http://localhost:3000/user/',file).subscribe(response=>{
+    const postFile=response;
+      console.log("postfile",postFile);
+     localStorage.setItem("postFile",JSON.stringify(postFile));
+    });
+  }
   edituserprofile(){
     this.userService.editUser(this.user);  
      
     alert("Your details are successfully updated!!");
     this.router.navigate(['user-home']);
   }
- 
+  deleteuserprofile(user:any){
+   
+  this.userService.deleteUser(user._id)
+  .subscribe((data: any)=>{
+  this.users=this.users.filter((p:any)=>p!=user);
+  });
+}
 }

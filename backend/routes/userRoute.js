@@ -146,7 +146,8 @@ user.save();
 
 router.put('/update',(req,res)=>{
     console.log("this is",req.body);
-    
+//     var splits=req.body.profilePic.split(['fakepath\\']);
+// const imageUrl='http://localhost:3000/images/'+splits[1];
     
     userid=req.body.userid,
     username= req.body.username,

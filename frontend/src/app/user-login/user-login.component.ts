@@ -20,7 +20,12 @@ export class UserLoginComponent implements OnInit {
 }
   users: any;
   value: any;
-  constructor(private userService:UserServiceService,private router:Router,private _auth:AuthServiceService) { }
+  showErrorMessage: boolean;
+  
+
+  constructor(private userService:UserServiceService,private router:Router,private _auth:AuthServiceService) {
+   
+   }
 
   ngOnInit(): void {
     this.userService.getUsersList().subscribe((data: any)=>{
@@ -29,14 +34,19 @@ export class UserLoginComponent implements OnInit {
             
     })
   }
+   
 userLogin(value:any){
+  var showErrorMessage = false;
+
   console.log("inside userlogin");
 const arr=this.users;
 console.log(value);
 console.log("List of employers",this.users);
 
 for(let i=0;i<arr.length;i++){
-  
+ 
+
+   
   if(arr[i].email==this.user.email){
     if(this.users[i].password==this.user.password){
     alert("login successfull!!");
@@ -60,9 +70,16 @@ for(let i=0;i<arr.length;i++){
       localStorage.setItem("userImg",this.user.profilePic);
       
       })
-      }       
+     
+      }
+      
+     
             this.router.navigate(["/user-home"])
     }
-  } 
+    this.showErrorMessage=true;
   }
+  } 
+
+ 
+  
 }
