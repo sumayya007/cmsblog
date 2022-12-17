@@ -22,7 +22,12 @@ export class FileuploadComponent implements OnInit {
     createdAt:'',
     updatedAt:''
   }
-  
+  category={
+    categoryid:'',
+    categoryname:'',
+    adminname:''
+    
+  }
   postFile={
     "fieldname":"",
     "originalname":"",
@@ -34,9 +39,15 @@ export class FileuploadComponent implements OnInit {
     "size":""
   }
   url: string | ArrayBuffer | null;
+  categories: any;
   constructor(private http:HttpClient,private router:Router,private userService:UserServiceService) { }
 
   ngOnInit(): void {
+    this.userService.adminGetCategoriesList().subscribe((data: any)=>{
+    
+  
+      this.categories=JSON.parse(JSON.stringify(data));
+      console.log("list of categories",this.categories);})
    
   }
   readUrl(event:any) {

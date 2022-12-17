@@ -4,32 +4,32 @@
         <form action="" class="settingsForm"  >
          <div class="settingsTitle">
             <span class="settingsUpdateTitle">Update Your Account</span>
-            <span class="settingsDeleteTitle" (click)="deleteAdmin(admin);">Delete Account</span>
+           
          </div>
         
             <label for="">Profile Picture</label>
             <div class="settingsProfilePic">
-                <img src="https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg" alt="">
-                <label for="fileInput">
+                <img src={{this.admins[0].profilePic}} alt="">
+                <!-- <label for="fileInput">
                  <span class="settingsPPIcon"><i class="fas fa-user-circle"></i></span>
                 </label>
-                <input type="file" name="" id="fileInput" style="display:none;">
+                <input type="file" name="" id="fileInput" style="display:none;"> -->
                 </div>
 
                 <label>Username</label>
-                <td >{{this.admin.adminname}}</td>
+                <td >{{this.admins[0].adminname}}</td>
                
                 <label>Email</label>
                
-                <td>{{this.admin.email}}</td>
+                <td>{{this.admins[0].email}}</td>
                 <label>Password</label>
-                <td>{{this.admin.password}}</td>
+                <td>{{this.admins[0].password}}</td>
                
                 <button class="settingsSubmit" routerLink="/admin-edit-settings">Edit</button>
          </form>
     </div>
     <div class="side">
-        <app-sidebar></app-sidebar>
+        <app-admin-sidebar></app-admin-sidebar>
     </div>
     
 </section>

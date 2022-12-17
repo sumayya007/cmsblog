@@ -1,0 +1,38 @@
+
+<app-admin-header></app-admin-header>
+<section id="singlePage">
+<div class="singlePageContainer">
+    
+    <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="editPost()" enctype="multipart/form-data">   
+    <div class="post">   
+        <h2>EDIT POST</h2> 
+        <img src="{{this.post.photo}}" alt="postImage" class="postImg" name="photo" [(ngModel)]="this.post.photo" required >
+        <div class="postInfo">
+            <div class="postContent">
+                <label for="">Post Id</label>
+                <input type="text" style="margin-left: 20px;" name="podtid" [(ngModel)]="this.post.postid" required  >
+              
+            </div>
+            <div class="postContent">
+                <label for="">Category Name</label>
+                <input type="text" style="margin-left: 20px;" name="category" [(ngModel)]="this.post.category" required  >
+              
+            </div>
+
+            <div class="postContent">
+            <label for="">Title</label>
+            <input type="text" style="margin-left: 100px;" name="title" [(ngModel)]="post.title" required  >
+        </div>
+            <hr>
+           
+        <label for="textarea">Post Description</label><br>
+        <textarea name="textarea" id="textarea" cols="100" rows="15" style="overflow-y: scroll;" type="text" name="desc" [(ngModel)]="post.desc" required ></textarea>
+        
+        </div>
+        <button class="actionItemEdit">Update</button>
+    </div>
+</form>
+
+</div>
+
+</section>

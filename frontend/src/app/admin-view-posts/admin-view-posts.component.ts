@@ -27,5 +27,11 @@ this.userService.adminDeletePost(post._id)
 this.posts=this.posts.filter((p:any)=>p!=post);
 });
 }
+editPost(post:any){
+ localStorage.setItem("adminEditPostid",post._id);
+ const postid=localStorage.getItem("adminEditPostid");
+ console.log("got postid as foll",postid);
+ this.router.navigate(['admin-edit-post']);
+}
 
 }

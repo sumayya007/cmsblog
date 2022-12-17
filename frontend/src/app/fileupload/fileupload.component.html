@@ -11,14 +11,12 @@
         <div class="writeFormGroup">
             
             <label class="writeCategory">Select your Category</label>
-    <select id="writedropdown" name="category"  [(ngModel)]="post.category" #category="ngModel" required>
-        <option>Life</option>
-        <option>Music</option>
-        <option>Style</option>
-        <option>Sport</option>
-        <option>Tech</option>
-        <option>Cinema</option>
-    </select>
+            <select id="writedropdown" name="category"  [(ngModel)]="post.category" #category="ngModel" placeholder="Select your category" required>
+                <option value="0">--Select--</option>  
+                <option *ngFor="let cat of categories"  
+                value={{cat.categoryname}}>{{cat.categoryname}}</option>
+               
+            </select>
 
         </div>
         <input type="text" style="margin-left: 130px;font-size: 20px;" placeholder="Enter your username.." class="writeInput" autofocus="true" name="username"  [(ngModel)]="post.username" #title="ngModel" required>

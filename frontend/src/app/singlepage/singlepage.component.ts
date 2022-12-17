@@ -31,7 +31,7 @@ export class SinglepageComponent implements OnInit {
     this.userService.viewpostbyid(postid).subscribe((data: any)=>{
       console.log(data);
       this.post=JSON.parse(JSON.stringify(data));
-      localStorage.setItem("postid",this.post.postid);
+      
     })
   }
   

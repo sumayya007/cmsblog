@@ -5,30 +5,32 @@
             <span class="settingsUpdateTitle">Update Your Account</span>
             <span class="settingsDeleteTitle">Delete Account</span>
          </div>
-         <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="editadminprofile()" >
+         <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="editadminprofile()"  >
             <label for="">Profile Picture</label>
-            <div class="settingsProfilePic">
-                <img src="https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg" alt="">
+            <!-- <div class="settingsProfilePic">
+                <label>Upload new profilePic</label>
+               
                 <label for="fileInput">
                  <span class="settingsPPIcon"><i class="fas fa-user-circle"></i></span>
                 </label>
-                <input type="file" name="" id="fileInput" style="display:none;">
-                </div>
+
+                <input type="file"  #fileInput  id="fileInput" style="display:none;" (change)="onFileUpload()" class="fileInput" name="profilePic"  [(ngModel)]="this.admins[0].profilePic" #profilepic="ngModel" required>
+                </div> -->
 
                 <label>Username</label>
              
-                <input type="text" name="username" [(ngModel)]="admin.adminname" required  >
+                <input type="text" name="username" [(ngModel)]="this.admins[0].adminname" required  >
                 <label>Email</label>
-                <input type="email" name="email" [(ngModel)]="admin.email" required >
+                <input type="email" name="email" [(ngModel)]="this.admins[0].email" required >
                 
                 <label>Password</label>
                 
-                <input type="password" name="password" [(ngModel)]="admin.password" required >
+                <input type="password" name="password" [(ngModel)]="this.admins[0].password" required >
                 <button class="settingsSubmit">Update</button>
          </form>
     </div>
     <div class="side">
-        <app-sidebar></app-sidebar>
+        <app-admin-sidebar></app-admin-sidebar>
     </div>
     
 </section>

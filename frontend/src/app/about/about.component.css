@@ -1,0 +1,42 @@
+#mainContent{
+    margin-top: 60px;
+    background-color: beige;
+    height: 80vh;
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Lora',serif;
+    color: rgb(14, 13, 13);
+}
+.titleSmall{
+    position: absolute;
+    top: 12%;
+    font-size: 20px;
+}
+.titleLarge{
+    position: absolute;
+    top: 18%;
+    font-size: 100px;
+}
+#backgroundImage{
+    width: 100%;
+    height: 525px;
+   
+    object-fit: cover;
+}
+#aboutus{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+#aboutus h2{
+    align-items: center;
+}

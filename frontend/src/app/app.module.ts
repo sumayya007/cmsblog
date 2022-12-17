@@ -49,6 +49,13 @@ import { SuperadminheaderComponent } from './superadminheader/superadminheader.c
 import { FileuploadComponent } from './fileupload/fileupload.component';
 
 import { SuperadminAddAdminComponent } from './superadmin-add-admin/superadmin-add-admin.component';
+import { AdminCreatePostComponent } from './admin-create-post/admin-create-post.component';
+import { AdminEditPostComponent } from './admin-edit-post/admin-edit-post.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { MaincontactComponent } from './maincontact/maincontact.component';
+import { MainaboutComponent } from './mainabout/mainabout.component';
 
 
 @NgModule({
@@ -94,7 +101,14 @@ import { SuperadminAddAdminComponent } from './superadmin-add-admin/superadmin-a
       SuperadminheaderComponent,
       FileuploadComponent,
     
-      SuperadminAddAdminComponent
+      SuperadminAddAdminComponent,
+           AdminCreatePostComponent,
+           AdminEditPostComponent,
+           AdminSidebarComponent,
+           AboutComponent,
+           ContactComponent,
+           MaincontactComponent,
+           MainaboutComponent
   ],
   imports: [
     BrowserModule,

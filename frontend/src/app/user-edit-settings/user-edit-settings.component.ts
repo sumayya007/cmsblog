@@ -48,8 +48,9 @@ user={
      localStorage.setItem("postFile",JSON.stringify(postFile));
     });
   }
-  edituserprofile(){
-    this.userService.editUser(this.user);  
+  edituserprofile(user:any){
+    console.log(user._id)
+    this.userService.editUser(user,user._id);  
      
     alert("Your details are successfully updated!!");
     this.router.navigate(['user-home']);

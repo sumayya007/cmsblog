@@ -17,19 +17,19 @@ category={
   constructor(private userService:UserServiceService,private router:Router) { }
 
   ngOnInit(): void {
-    const categoryid=localStorage.getItem("editCatId");
-    console.log("catid is",categoryid)
+    const catid=localStorage.getItem("adminEditCat");
+    console.log("catid is",catid)
   
-    this.userService.viewcategorybyid(categoryid).subscribe((data: any)=>{
-      console.log("got category data as",data);
+    this.userService.adminviewcategorybyid(catid).subscribe((data: any)=>{
+      console.log(data);
       this.category=JSON.parse(JSON.stringify(data));
-        console.log("to be edited",this.category)    
+            
     })
   }
   editCategory(){
-    const catid=localStorage.getItem("editCatId");
+    const catid=localStorage.getItem("adminEditCat");
     console.log(this.category)
-    this.userService.editcategory(this.category);
+    this.userService.editcategory(this.category,catid),catid;
     alert("Your details are successfully updated!!");
     this.router.navigate(['admin-home']);
     

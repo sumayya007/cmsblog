@@ -28,8 +28,8 @@ export class AdminSettingsComponent implements OnInit {
    this.userService.getAdminByName().subscribe((data: any)=>{
     
   
-   this.admin=JSON.parse(JSON.stringify(data));
-  //  console.log("user is ",this.admin.adminname)
+   this.admins=JSON.parse(JSON.stringify(data));
+   console.log("user is ",this.admins[0].adminname)
   
    })
   }

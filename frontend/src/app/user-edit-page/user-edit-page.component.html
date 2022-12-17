@@ -8,7 +8,7 @@
         <div class="postInfo">
             <div class="postContent">
                 <label for="">Category Name</label>
-                <input type="text" style="margin-left: 20px;" name="category" [(ngModel)]="post.category" required  >
+                <input type="text" style="margin-left: 20px;" name="category" [(ngModel)]="post.category" disabled  >
               
             </div>
             <div class="postContent">
@@ -24,8 +24,6 @@
         <button class="actionItemEdit">Update</button>
     </div>
 </form>
-<div class="sideSection">
-    <app-sidebar></app-sidebar>
-</div>
+
 </div>
 </section>

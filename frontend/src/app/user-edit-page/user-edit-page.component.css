@@ -4,15 +4,15 @@
     position: relative;
 }
 .singlePageContainer{
-    flex:9;
+   
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-wrap: wrap; 
     flex-direction: row;
-    margin: 20px;
+  margin-bottom: 60px;
 }
-.sideSection{
-    flex:3;
-}
+
 .post{
     width:900px;
     display: flex;

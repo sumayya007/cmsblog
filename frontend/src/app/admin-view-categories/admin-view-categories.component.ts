@@ -29,12 +29,13 @@ export class AdminViewCategoriesComponent implements OnInit {
   
    })
   }
+ 
   editCategory(category:any){
-    localStorage.setItem("editCatId", category._id);
-    console.log(category._id)
+    localStorage.setItem("adminEditCat",category._id);
+  
+    
     this._router.navigate(['admin-edit-category']);
-    // this.userService.editcategory(this.category);
-  }
+   }
   
   deleteCategory(category:any){
     console.log("delete category",category);

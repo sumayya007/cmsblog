@@ -16,15 +16,19 @@ export class SidebarComponent implements OnInit {
      
   
 }
-  constructor(private userService:UserServiceService) { }
 
+
+  constructor(private userService:UserServiceService) { }
+  
   ngOnInit(): void {
     const username=localStorage.getItem("userName");
-   
+ 
     this.userService.getUserByName(username).subscribe((data:any)=>{
       this.user=JSON.parse(JSON.stringify(data));
       console.log(this.user.profilePic)
     })
-  }
+ 
+      
+    }
 
 }

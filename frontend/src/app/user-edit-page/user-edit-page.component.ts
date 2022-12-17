@@ -21,7 +21,7 @@ export class UserEditPageComponent implements OnInit {
   constructor(private userService:UserServiceService,private router:Router) { }
 
   ngOnInit(): void {
-    const postid=localStorage.getItem("postid");
+    const postid=localStorage.getItem("postId");
     console.log("postid is",postid)
   
     this.userService.viewpostbyid(postid).subscribe((data: any)=>{
@@ -31,7 +31,7 @@ export class UserEditPageComponent implements OnInit {
     })
   }
   editPost(){
-    const postid=localStorage.getItem("postid");
+    const postid=localStorage.getItem("postId");
     this.userService.editpost(this.post,postid);
     alert("Your details are successfully updated!!");
     this.router.navigate(['user-home']);

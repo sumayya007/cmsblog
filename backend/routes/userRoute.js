@@ -144,28 +144,70 @@ user.save();
 });   
 
 
-router.put('/update',(req,res)=>{
-    console.log("this is",req.body);
-//     var splits=req.body.profilePic.split(['fakepath\\']);
-// const imageUrl='http://localhost:3000/images/'+splits[1];
+ 
+
+  router.put("/update/:id", (req, res, next)=>{  
+    // console.log("img url is",req.body.profilePic);
+    // var splits=req.body.profilePic.split(['fakepath\\']);
+    // const imageUrl='http://localhost:3000/images/'+splits[1];
+   
     
     userid=req.body.userid,
-    username= req.body.username,
-    email = req.body.email,
-    password = req.body.password,
-    profilePic = req.body.profilePic
-    var query = { "userid": userid };
-  UserData.updateOne({query},{$set:{
-    "username":req.body.username,
-    "email":req.body.email,
-    "password":req.body.password,
-    "profilePic":req.body.profilePic,
-   }}).then(function(){
-   console.log("hi")
-      res.send();
-  });
-  
-  });   
+    username=req.body.username,
+    email=req.body.email,
+    password=req.body.password,
+    profilePic=req.body.profilePic
+    
+    
+    console.log("hiii user");
+    var user=new UserData(user);
+     user = {  
+      _id: req.body.id,  
+      username:req.body.username,
+      email:req.body.email,
+      password : req.body.password,
+      profilePic:req.body.profilePic
+     
+    };  
+    UserData.updateOne({_id:req.params.id}, user).then(result =>{  
+      console.log("result",result);  
+      res.status(200).json({message: "Update Successful!"})  
+    });    
+  });  
+
+  router.put("/editpost/:id", (req, res, next)=>{  
+    // console.log("img url is",req.body.profilePic);
+    // var splits=req.body.profilePic.split(['fakepath\\']);
+    // const imageUrl='http://localhost:3000/images/'+splits[1];
+   
+    
+    title= req.body.title,
+    desc = req.body.desc,
+    photo = req.body.photo,
+    username = req.body.username,
+    category=req.body.category,
+    createdAt=req.body.createdAt,
+    updatedAt=req.body.updatedAt
+    
+    
+    console.log("hiii user");
+    var post=new PostData(post);
+     post = {  
+      _id: req.body.id,  
+      title:req.body.title,
+    desc:req.body.desc,
+    photo:req.body.photo,
+    category:req.body.category,
+    updatedAt:Date.now()
+     
+    };  
+    PostData.updateOne({_id:req.params.id}, post).then(result =>{  
+      console.log("result",result);  
+      res.status(200).json({message: "Update Successful!"})  
+    });    
+  });  
+
+
   router.put('/editpost/:id',(req,res)=>{
     console.log("this is",req.body);
     

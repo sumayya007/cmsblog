@@ -1,20 +1,27 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './about/about.component';
 import { AdminCreateCategoryComponent } from './admin-create-category/admin-create-category.component';
+import { AdminCreatePostComponent } from './admin-create-post/admin-create-post.component';
 import { AdminEditCategoryComponent } from './admin-edit-category/admin-edit-category.component';
+import { AdminEditPostComponent } from './admin-edit-post/admin-edit-post.component';
 import { AdminEditSettingsComponent } from './admin-edit-settings/admin-edit-settings.component';
 import { AdminHomeComponent } from './admin-home/admin-home.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { AdminSettingsComponent } from './admin-settings/admin-settings.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 import { AdminViewCategoriesComponent } from './admin-view-categories/admin-view-categories.component';
 import { AdminViewPostsComponent } from './admin-view-posts/admin-view-posts.component';
 import { AdminViewUsersComponent } from './admin-view-users/admin-view-users.component';
 import { AdminpanelComponent } from './adminpanel/adminpanel.component';
 import { AuthguardGuard } from './authguard.guard';
+import { ContactComponent } from './contact/contact.component';
 import { FileuploadComponent } from './fileupload/fileupload.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingpageComponent } from './landingpage/landingpage.component';
+import { MainaboutComponent } from './mainabout/mainabout.component';
+import { MaincontactComponent } from './maincontact/maincontact.component';
 import { MainheaderComponent } from './mainheader/mainheader.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { SinglepageComponent } from './singlepage/singlepage.component';
@@ -76,6 +83,7 @@ const routes: Routes = [
     path:'user-settings',
     component:UserSettingsComponent,
     canActivate:[AuthguardGuard]
+ 
   },
   {
     path:'admin-settings',
@@ -125,8 +133,22 @@ const routes: Routes = [
     canActivate:[AuthguardGuard]
   },
   {
+    path:'admin-create-post',
+    component:AdminCreatePostComponent,
+    canActivate:[AuthguardGuard]
+  },
+  {
+    path:'admin-edit-post',
+    component:AdminEditPostComponent,
+    canActivate:[AuthguardGuard]
+  },
+  {
     path:'adminpanel',
     component:AdminpanelComponent
+  },
+  {
+    path:'admin-sidebar',
+    component:AdminSidebarComponent
   },
   {
     path:'superadmin-login',
@@ -190,6 +212,23 @@ const routes: Routes = [
     path:'fileupload',
     component:FileuploadComponent,
     canActivate:[AuthguardGuard]
+  },
+  {
+    path:'about',
+    component:AboutComponent
+  },
+  {
+    path:'mainabout',
+    component:MainaboutComponent
+  }
+  ,
+  {
+    path:'contact',
+    component:ContactComponent
+  },
+  {
+    path:'maincontact',
+    component:MaincontactComponent
   }
 ];
 

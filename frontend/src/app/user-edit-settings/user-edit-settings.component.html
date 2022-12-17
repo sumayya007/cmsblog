@@ -5,26 +5,27 @@
             <span class="settingsUpdateTitle">Update Your Account</span>
             <span class="settingsDeleteTitle" (click)='deleteuserprofile(user)'>Delete Account</span>
          </div>
-         <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="edituserprofile()" >
+         <form action="" class="settingsForm" #edituserForm="ngForm"  (ngSubmit)="edituserprofile(user)" >
             <!-- <label for="">Profile Picture</label>
             <div class="settingsProfilePic">
-                <!-- <img alt="" name="profilePic" [(ngModel)]="user.profilePic" required> -->
-                <!-- <label for="fileInput">
+                <label>Upload new profilePic</label>
+               
+                <label for="fileInput">
                  <span class="settingsPPIcon"><i class="fas fa-user-circle"></i></span>
                 </label>
-               
-                <input #fileInput type="file" style="display:none;" id="fileInput" (change)="onFileUpload()" name="profilePic"  [(ngModel)]="user.profilePic" #profilePic="ngModel" required> -->
-                <!-- </div> --> 
+
+                <input type="file"  #fileInput  id="fileInput" style="display:none;" (change)="onFileUpload()" class="fileInput" name="profilePic"  [(ngModel)]="this.user.profilePic" #profilepic="ngModel" required>
+                </div> -->
 
                 <label>Username</label>
              
-                <input type="text" name="username" [(ngModel)]="user.username" required  >
+                <input type="text" name="username" [(ngModel)]="this.user.username"  disabled >
                 <label>Email</label>
-                <input type="email" name="email" [(ngModel)]="user.email" required >
+                <input type="email" name="email" [(ngModel)]="this.user.email"  >
                 
                 <label>Password</label>
                 
-                <input type="password" name="password" [(ngModel)]="user.password" required >
+                <input type="password" name="password" [(ngModel)]="this.user.password">
                 <button class="settingsSubmit">Update</button>
          </form>
     </div>

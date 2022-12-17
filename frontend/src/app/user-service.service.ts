@@ -93,6 +93,18 @@ category={
     
     return this.http.get<any>("http://localhost:3000/user/getpostsbyid/"+postid);
   }
+  adminviewpostbyid(postid:any){
+    
+    return this.http.get<any>("http://localhost:3000/admin/getpostsbyid/"+postid);
+  }
+  adminviewcategorybyid(id:any){
+    return this.http.get<any>("http://localhost:3000/admin/getcategorybyid/"+id);
+  }
+  admineditpost(post:any,postid:any){
+    
+    console.log(postid);
+    this.http.put("http://localhost:3000/admin/admineditpost/"+postid,post).subscribe(data =>console.log(data));   
+  }
   viewcategorybyid(id:any){
 
     return this.http.get<any>("http://localhost:3000/admin/getcategorybyid/"+id);
@@ -117,20 +129,20 @@ category={
     console.log("inside superadmingetadmins")
     return this.http.get<any>("http://localhost:3000/superadmin/admins");
   }
-  editUser(user:any){
-    return this.http.put("http://localhost:3000/user/update",user).subscribe(data=>{console.log("data is"+data)});
+  editUser(user:any,id:any){
+    return this.http.put("http://localhost:3000/user/update/"+id,user).subscribe(data=>{console.log("data is"+data)});
 
   }
-  editAdmin(admin:any){
-    return this.http.put("http://localhost:3000/admin/updateadmin",admin).subscribe(data=>{console.log("data is"+data)});
+  editAdmin(admin:any,id:any){
+    return this.http.put("http://localhost:3000/admin/updateadmin/"+id,admin).subscribe(data=>{console.log("data is"+data)});
 
   }
-  editpost(post:any,postid:any){
-    return this.http.put("http://localhost:3000/user/editpost/"+postid,post).subscribe(data=>{console.log("data is"+data)});
+  editpost(post:any,id:any){
+    return this.http.put("http://localhost:3000/user/editpost/"+id,post).subscribe(data=>{console.log("data is"+data)});
   }
-  editcategory(category:any){
-console.log(category)
-    return this.http.put("http://localhost:3000/admin/editcategory",category).subscribe(data=>{console.log("data is"+data)});;
+  editcategory(category:any,id:any){
+
+    this.http.put("http://localhost:3000/admin/admineditcategory/"+id,category).subscribe(data =>console.log(data));   
   }
   deleteUser(id:any){
    
@@ -189,6 +201,12 @@ console.log(category)
    
     return this.http.post<any>("http://localhost:3000/user/createpost",{"post":post}).subscribe(data=>{console.log(data)});
   }
+  adminCreatePost(post:any){
+    console.log(post.photo);
+    console.log(post);
+    
+     return this.http.post<any>("http://localhost:3000/admin/createpost",{"post":post}).subscribe(data=>{console.log(data)});
+  }
   viewfile(photo:any){
     return this.http.get<any>("http://localhost:3000/user/viewfile/"+photo);
   }
@@ -205,5 +223,8 @@ console.log(category)
     const data=new FormData();
     data.append('image',image);
     console.log(data)
+  }
+  adminGetCategoriesList(){
+    return this.http.get<any>("http://localhost:3000/admin/getcategories");
   }
 }
