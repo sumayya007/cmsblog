@@ -21,9 +21,9 @@
 <div class="post">  
     <ul style="list-style:none ;">
         <li> 
-            <div><img id="imgicon" src={{post.photo}} alt="">
+            <div><img id="imgicon" src={{post.photo}} alt=""></div>
             <span id="postUsername">{{post.username}}</span> in <span id="postCategory">{{post.category}}</span>
-            </div>
+            
             <br>
             <span id="postTitle">{{post.title}}</span>
             <br>
@@ -33,6 +33,7 @@
 
 </div>
 </div>
+
 </section>
 </section>
 <hr class="hr">
@@ -42,7 +43,7 @@
         
         <div id="mainposts" >
             <h2 style="margin-left: 30px;margin-bottom: 30px;">VIEW ALL POSTS..</h2>
-            <div class="postcontainer"*ngFor="let post of posts">
+            <div class="postcontainermain"*ngFor="let post of posts">
                 
            
         <div class="mainpost">    
@@ -58,10 +59,10 @@
                 <span id="postTime"><span style="font-style:italic;"> Updated on:</span> {{post.updatedAt}}</span>
                 <i class="fa-regular fa-bookmark" style="cursor: pointer;"></i>
             </div>
-            
+            <button  style="width: 100px;margin-top: 5px;" class="btn btn-primary" routerLink="/user-login">View Post</button>
         </div>
         <div id="postright">
-            <img src={{post.photo}} alt="postImage" class="postImg">
+            <img src={{post.photo}} alt="postImage" class="postImg" style="width: 300px;">
         </div>
     </div>
    </div>
@@ -70,13 +71,22 @@
         <div class="sidebarTitle">
             <span style="padding: 10px;">DISCOVER MORE OF WHAT MATTERS <br>TO YOU</span>
             <div class="sidebarCategories">
-                <div class="sidebarList" *ngFor="let category of categories">
-                    <span class="sidebarListItem">{{category.categoryname}}</span>
+                <div class="sidebarList">
+                    <span class="sidebarListItem">Fashion</span>
+                    <span class="sidebarListItem">Art</span>
+                    <span class="sidebarListItem">Literature</span>
+                    <span class="sidebarListItem">LifeStyle</span>
+                </div>    
+                <div class="sidebarList">   
+                    <span class="sidebarListItem">Cooking</span>
+                    <span class="sidebarListItem">Fiction</span>
+                    <span class="sidebarListItem">Kids</span>
                     <br>
                 </div>
             </div>
         </div>
     </div>
+   
     </div>
 
 </section>

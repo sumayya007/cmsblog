@@ -19,10 +19,10 @@ export class LandingpageComponent implements OnInit {
       console.log("posts list",this.posts) ; 
       
   })
-  this.userService.superadminGetCategoriesList().subscribe((data: any)=>{
-    console.log(data);
-    this.categories=JSON.parse(JSON.stringify(data));
-      console.log("categories list",this.categories) ;   
-  })
+  // this.userService.superadminGetCategoriesList().subscribe((data: any)=>{
+  //   console.log(data);
+  //   this.categories=JSON.parse(JSON.stringify(data));
+  //     console.log("categories list",this.categories) ;   
+  // })
 }
 }
