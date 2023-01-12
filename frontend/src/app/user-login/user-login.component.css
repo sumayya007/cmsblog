@@ -15,7 +15,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-right: 20%;
+    margin-left: 20%;
     margin-top: 50px;
     
    
@@ -24,9 +24,10 @@
     flex:8;
     height: 700px;
     width: 500px;
-    background-image: url("../user-login/img/loginpic.jpg");
-    background-size: cover;
+    background-image: url("../user-login/img/loginbanner1.png");
+    background-size:70%;
     background-repeat: no-repeat;
+    margin-top: 200px;
 }
 
 .loginTitle{
@@ -66,4 +67,41 @@
     color: white;
     border-radius: 10px;
     padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+     #userlogin{
+    
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: -150px;
+        margin-bottom: 100px;
+       
+    
+    }
+    #uloginbanner{
+        flex:8;
+        height: 500px;
+        width: 400px;
+        margin-bottom: -280px;
+        background-image: url("../user-login/img/loginpic.jpg");
+        
+        background-repeat: no-repeat;
+       
+    }
+    .ulogin{
+       flex:2;
+       margin-top: 200px;
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20%;
+        margin-top: 900px; */
+        
+       
+    }  
+    
 }

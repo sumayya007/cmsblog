@@ -1,10 +1,42 @@
-<section id="header">
+
+
+
+
+<header>
+    <nav class="navbar">
+      <a
+        href=""
+        class="nav-branding"
+        style="font-weight: 900; font-variant: small-caps"
+        >CHANNEL</a
+      >
+      <ul class="nav-menu">
+        <li class="topListItem" routerLink="/user-home">HOME</li>
+        <li class="topListItem" routerLink="/about">ABOUT</li>
+        <li class="topListItem" routerLink="/contact">CONTACT</li>
+        <li class="topListItem" routerLink="/fileupload">WRITE</li>
+        <li class="topListItem" (click)="logout()">LOGOUT</li>
+        
+      </ul>
+      <img class="topImg" routerLink="/user-settings" src={{user.profilePic}} alt="">
+        <i class="topSearchIcon fa-solid fa-magnifying-glass"></i>
+      <div class="hamburger" >
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+
+
+  <!-- <section id="header">
     <div class="topLeft">
-        <!-- <i class="topIcon fa-brands fa-square-facebook"></i>
+        <!-- <!-- <i class="topIcon fa-brands fa-square-facebook"></i>
         <i class="topIcon fa-brands fa-square-twitter"></i>
         <i class="topIcon fa-brands fa-square-pinterest"></i>
         <i class="topIcon fa-brands fa-square-instagram"></i> -->
-        <span class="logo">CHANNEL</span>
+        <!-- <span class="logo">CHANNEL</span>
     </div>
     <div class="topCenter">
         <ul class="topList">
@@ -20,5 +52,8 @@
         <img class="topImg" routerLink="/user-settings" src={{user.profilePic}} alt="">
         <i class="topSearchIcon fa-solid fa-magnifying-glass"></i>
         <!-- https://i.pinimg.com/originals/a4/c1/5a/a4c15a88d299ff50ebb6ea87350ff605.jpg -->
-    </div>
-</section>
+    <!-- </div>
+</section>   --> 
+
+ 
+ 

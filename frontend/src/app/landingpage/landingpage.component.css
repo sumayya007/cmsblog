@@ -72,13 +72,42 @@ hr.hr{
     
 }
 #main{
+    /* display: flex;
+    flex-direction: column; */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
 }
+/* #wrapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 30px;
+   
+}
+#left{
+    flex: 5;
+    width: 50%;
+    padding: 30px;
+}
+#right{
+    flex: 5;
+    flex-direction: row;
+
+    padding: 30px;
+} */
 #sidebar{
     margin-left: 150px;
     display: flex;
     flex-direction: row;
+
 }
 .sidebarCategories{
     display: flex;
@@ -200,18 +229,20 @@ padding-bottom: 10px;
     width: 400px;
 }
 #postUsername{
-text-transform: uppercase;
+/* text-transform: uppercase; */
 font-weight: 500;
-font-size: 20px;
+font-size: 24px;
 }
 #postCategory{
 text-transform: uppercase;
-font-weight: 500;
-font-size: 20px;
+
+font-weight: 400;
+font-size: 18px;
 }
 #postTitle{
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 22px;
+  /* font-weight: 600; */
+  margin-top: -20px;
 }
 #postTime{
 font-size: 18px;
@@ -255,13 +286,15 @@ padding: 10px;
 margin-bottom: 80px;
 
 }
+
 #postDesc{
     height: 100px;
-    width: 500px;
+   
     overflow-y: hidden;
 }
 #postLeft{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column; 
 }
 
@@ -270,6 +303,23 @@ margin-bottom: 80px;
     height: 240px;
     border-radius: 7px;
     float: right;
+}
+@media (max-width:678px){
+    #posts{
+        overflow-y:scroll;
+    }
+    #sidebar{
+        margin-left: 10px;
+   margin-bottom: 30px;
+    }
+    .mainpost{
+        display: flex;
+        flex-direction: column;
+    }
+    .postImg{
+        float: left;
+        margin-top: 15px;
+    }
 }
 #footer{
     background-color: black;
