@@ -2,9 +2,9 @@
 <section id="userRegister">
   
     <div class="uRegister">
-    <span class="registerTitle">Register</span>
+   
     <form action="" class="registerForm"  #userlogin="ngForm" (ngSubmit)="userSignup(userlogin.value)" enctype="multipart/form-data">
-       
+      <span class="registerTitle">Register</span>
         <label for="">Username</label>
         <input type="text" placeholder="Enter your username..." class="registerInput" name="username"  [(ngModel)]="user.username" #uname="ngModel" required >
         <div class="msg">
